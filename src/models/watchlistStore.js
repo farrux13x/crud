@@ -1,6 +1,40 @@
 // In-memory data store for watchlist items.
-let nextId = 1;
-const watchlist = [];
+const watchlist = [
+  {
+    id: 1,
+    title: "Inception",
+    genre: "Sci-Fi",
+    year: 2010,
+    director: "Christopher Nolan",
+    rating: 8.8,
+    poster: "https://example.com/posters/inception.jpg",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 2,
+    title: "The Matrix",
+    genre: "Action",
+    year: 1999,
+    director: "Lana Wachowski, Lilly Wachowski",
+    rating: 8.7,
+    poster: "https://example.com/posters/the-matrix.jpg",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 3,
+    title: "Parasite",
+    genre: "Thriller",
+    year: 2019,
+    director: "Bong Joon-ho",
+    rating: 8.5,
+    poster: "https://example.com/posters/parasite.jpg",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+];
+let nextId = watchlist.length + 1;
 
 function getAll() {
   return watchlist;
